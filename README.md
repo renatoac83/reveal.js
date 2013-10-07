@@ -1,6 +1,7 @@
 # What's new in my fork
 
 This a Firefox version (with a different approach) of gesture+reveal.js.
+Press "spacebar" to toggle camera (and gesture recognition).
 
 # What's new on willy-vvu's fork
 
