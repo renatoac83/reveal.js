@@ -1,28 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 	<head>
 		<meta charset="utf-8">
-
 		<title>Webcam-based gesture recognition with reveal.js</title>
-
 		<meta name="description" content="Webcam-based gesture recognition with reveal.js">
-		<meta name="author" content="William Wu (reveal.js by Hakim El Hattab)">
-
+		<meta name="author" content="Renato AC (gesture by William Wu (reveal.js by Hakim El Hattab))">
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/default.css" id="theme">
-
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
-
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 		<script>
 			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 		</script>
-
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -30,33 +22,32 @@
 
 	<body>
 		<a href="https://github.com/willy-vvu/reveal.js" style="position:fixed;z-index:1000;left:0;top:0;"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
-		<a href="http://www.chromeexperiments.com/detail/gesture-based-revealjs/" style="position:fixed;z-index:1000;left:20px;bottom:20px;"><img src="badge.jpg" alt="See my Experiment on ChromeExperiments.com" /></a>
+		<a href="#" style="position:fixed;z-index:1000;left:20px;bottom:20px;"><img src="badge.jpg" /></a>
 		<div class="reveal">
-
 			<!-- Any section element inside of this container is displayed as a slide -->
 <div class="slides">
     <section>
         <section>
             <h1>What is this?</h1>
-            <div>This is what I got when I combined&nbsp;<b>webcam-based gesture recognition</b> with Hakim El Hattab's <i>reveal.js.</i>
+            <div>This is the combination of <b>webcam-based gesture recognition</b> with Hakim El Hattab's <i>reveal.js.</i>
         </div>
-        <div>It took me a while to write and fine tune the detection algorithms. Even then, the algorithms are only about 80% accurate. You get the gist of it though:&nbsp;</div>
+        <div>The original author took a while to write and fine tune the detection algorithms. Even then, the algorithms are only about 80% accurate. You get the gist of it though:&nbsp;</div>
         <div>
             <u>A flick of the hand&nbsp;</u>in mid-air changes the slide.</div>
             <p>
             <u>A two hand flick up or down</u>&nbsp;activates the slide overview.</p>
             <p>Tips and troubleshooting in the slides below (you can still use the keyboard or reveal.js's built in controls)</p>
-</section>
+    </section>
             <section>
                 <h2>USAGE TIPS</h2>
-                <div>(Troubleshooting is in the slide below this one)</div>
                 <div>
-                    <div style="">
+                    <div style="font-size: 85%">
                         <ul>
-                            <li>The detection algorithm can determine the amount and position of motion. It will only change the slide if your amount of motion exceeds a threshold.</li>
-                            <li>Try to keep the rest of your body still.</li>
+                            <li>Hold your hand in one position for a second. Then move to another position. If you move more sideways it will change page left/right. If you move more up/down then it will go up/down the pages.</li>
+                            <li>Try to keep the rest of your body still. (use your webcam with low color and high gamma/brightness to improve performance)</li>
                             <li>Your hand should preferably come within two to three feet away from the camera.</li>
-                            <li>Gestures should be performed with open palms facing the camera.</li>
+                            <li>There are crossmarks to show what the software is reading (the difference between two crosses will determine the page change).</li>
+                            <li>Your hand position is indicated by a small dark line (on the upper-left part of your hand).</li>
                         </ul>
                     </div>
                 </div>
@@ -65,10 +56,9 @@
                 <h2>Troubleshooting</h2>
                 <div>
                     <li style="">You need a webcam. You're sunk if you don't have one.</li>
-                    <li style="">If you're not viewing this in Google Chrome, please do.</li>
-                    <li style="">If you're using Chrome, you should get a message asking to access your webcam. Hit Allow.</li>
+                    <li style="">If you're using Firefox, you should get a message asking to access your webcam. Hit Allow.</li>
                     <li style="">If you aren't getting that message, refresh.</li>
-                    <li style="">If refreshing doesn't work, head over to chrome://flags and enable all flags that mention WebRTC. Restart Chrome.</li>
+                    <li style="">If refreshing doesn't work, restart Firefox.</li>
                     <li style="">If that doesn't work, I don't know what will. You can at least watch a video of this at <a href="http://youtu.be/bXF68hNPuNo">http://youtu.be/bXF68hNPuNo</a>.</li>
                 </div>
             </section>
@@ -125,18 +115,15 @@
                         <div>
                             <br>
                         </div>
-                        <div>Why Chrome? Look below to find out.</div>
+                        <div>Why Firefox? Look below to find out.</div>
                     </section>
                     <section>
-                        <h2>Chrome meets Javascript</h2>
-                        <div>Chrome runs Javascript using its wonderfully fast</div>
-                        <div>
-                            <b>V8 Javascript Engine.</b>
-                        </div>
+                        <h2>Firefox meets Javascript</h2>
+                        <div>Firefox runs Javascript and it is wonderfully fast</div>
                         <div>
                             <br>
                         </div>
-                        <div>It's remarkably fast. I ran my Tic-tac-toe algorithm on multiple browsers and this is how V8 stacks up:<br>
+                        <div>It's remarkably fast. A Tic-tac-toe algorithm was used on multiple browsers and this is how it stacks up:<br>
                         </div>
                         <div>
                             <br>
@@ -208,18 +195,6 @@
                     </div>
                     <div>Who needs touchscreens when you have this?</div>
                 </section>
-                <section>
-                    <h2>More Info</h2>
-                    <div>
-                        <div>Fork me on Github!&nbsp;<a href="https://github.com/willy-vvu/reveal.js" style="">https://github.com/willy-vvu/reveal.js</a>
-                    </div>
-                    <div>
-                        <br>
-                    </div>
-                    <div>My site is at&nbsp;<a href="http://willy.herokuapp.com/">http://willy.herokuapp.com</a>
-                </div>
-            </div>
-        </section>
     </div>
 		</div>
 		<script src="lib/js/head.min.js"></script>
@@ -249,17 +224,40 @@
 			});
 		</script>
 		<style>
-		#comp{
-			position:fixed;
-			left:0;
-			top:0;
-			width:100%;
-			height:100%;
-			opacity:0.1;
-		}
+        #comp{
+            position:fixed;
+            left:0;
+            top:0;
+            width:100%;
+            height:100%;
+            opacity:0.1;
+        }
+        #mini{
+            position:fixed;
+            left:0;
+            top:0;
+            width: 25px;
+            height: 25px;
+            background: white;
+            display: none;
+        }
 		</style>
+<!-- hand gesture stuff -->
+        <div id='mini'>&nbsp;</div>
+        <div id="disp"><canvas id="comp"></canvas></div>
+        <video id="video"  width="240" height="240" style="display:none"></video>
+        <canvas id="canvas" style="width:240px;height:240px;display:none"></canvas>
+
+        <script src="js/gesture.js"></script>
+<!-- hand gesture stuff end -->
+
+
+<!-- old code
+
 		<div id="disp"><canvas id="comp"></canvas></div>
 		<video id="video" autoplay width="300" style="display:none"></video>
 		<canvas id="canvas" style="width:300px;display:none;"></canvas>
 		<script src="js/gesture.js"></script>	</body>
+
+-->
 </html>
